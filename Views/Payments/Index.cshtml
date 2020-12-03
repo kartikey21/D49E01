@@ -9,21 +9,75 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.BasicSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayBand)
+            </th>
+            <th>
+                HRA
+            </th>
+            <th>
+                TA
+            </th>
+            <th>
+                DA
+            </th>
+            <th>
+                Net Salary
+            </th>
+            <th>
+                TDS
+            </th>
+            <th>
+                In Hand
+            </th>
+            
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BasicSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayBand)
+                </td>
+                <td id="HRA">
+                </td>
+                <td id="TA">
+                </td>
+                <td id="DA">
+                </td>
+                <td id="NS">
+                </td>
+                <td id="TDS">
+                </td>
+                <td id="IH">
+                </td>
+            </tr>
+            <script>
+                var calcHRA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.1;
+                document.getElementById("HRA").innerHTML = calcHRA;
+                var calcTA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.05;
+                document.getElementById("TA").innerHTML = calcTA;
+                var calcDA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.05;
+                document.getElementById("DA").innerHTML = calcDA;
+                var calcNet = (@Html.DisplayFor(modelItem => item.BasicSalary))+calcHRA+calcTA+calcDA;
+                document.getElementById("NS").innerHTML = calcNet;
+                var calcTDS = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.1;
+                document.getElementById("TDS").innerHTML = calcTDS;
+                var calcInHand = calcNet-calcTDS;
+                document.getElementById("IH").innerHTML = calcInHand;
+            </script>
+        }
     </tbody>
 </table>

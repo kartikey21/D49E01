@@ -32,15 +32,12 @@ namespace D49E01.Models
         {
             modelBuilder.Entity<Payment>(entity =>
             {
-                entity.HasKey(e => new { e.PayBand, e.BasicSalary })
-                    .HasName("pk_table");
+                entity.HasKey(e => e.PayBand)
+                    .HasName("PK__payment__66B0F53F1F494EC6");
 
                 entity.ToTable("payment");
 
-                entity.HasIndex(e => e.PayBand, "UQ__payment__66B0F53EFD266A0A")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.BasicSalary, "UQ__payment__B589ED30E5E8FC32")
+                entity.HasIndex(e => e.BasicSalary, "UQ__payment__B589ED30F36E1802")
                     .IsUnique();
 
                 entity.Property(e => e.PayBand).HasMaxLength(1);

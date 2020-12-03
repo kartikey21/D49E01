@@ -165,3 +165,8 @@ D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\bin\Debug\ne
 D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\obj\Debug\net5.0\Razor\Views\Payments\Create.cshtml.g.cs
+D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\obj\Debug\net5.0\Razor\Views\Payments\Delete.cshtml.g.cs
+D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\obj\Debug\net5.0\Razor\Views\Payments\Details.cshtml.g.cs
+D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\obj\Debug\net5.0\Razor\Views\Payments\Edit.cshtml.g.cs
+D:\Coforge\2.Technical Training(Trainer Mohd. Salman)\Day 49\D49E01\obj\Debug\net5.0\Razor\Views\Payments\Index.cshtml.g.cs

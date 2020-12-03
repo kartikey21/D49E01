@@ -52,32 +52,25 @@
                     @Html.DisplayFor(modelItem => item.PayBand)
                 </td>
                 <td id="HRA">
+                    @(@item.BasicSalary*0.1)
                 </td>
                 <td id="TA">
+                    @(@item.BasicSalary*0.05)
                 </td>
                 <td id="DA">
+                    @(@item.BasicSalary*0.05)
                 </td>
                 <td id="NS">
+                    @(@item.BasicSalary*1.2)
                 </td>
                 <td id="TDS">
+                    @(@item.BasicSalary*0.1)
                 </td>
                 <td id="IH">
+                    @(@item.BasicSalary*1.1)
                 </td>
             </tr>
-            <script>
-                var calcHRA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.1;
-                document.getElementById("HRA").innerHTML = calcHRA;
-                var calcTA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.05;
-                document.getElementById("TA").innerHTML = calcTA;
-                var calcDA = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.05;
-                document.getElementById("DA").innerHTML = calcDA;
-                var calcNet = (@Html.DisplayFor(modelItem => item.BasicSalary))+calcHRA+calcTA+calcDA;
-                document.getElementById("NS").innerHTML = calcNet;
-                var calcTDS = (@Html.DisplayFor(modelItem => item.BasicSalary))*0.1;
-                document.getElementById("TDS").innerHTML = calcTDS;
-                var calcInHand = calcNet-calcTDS;
-                document.getElementById("IH").innerHTML = calcInHand;
-            </script>
+            
         }
     </tbody>
 </table>
